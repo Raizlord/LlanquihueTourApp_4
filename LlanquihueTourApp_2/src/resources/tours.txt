@@ -1,0 +1,5 @@
+RutaLagos;Lacustre;25000
+SaboresDelSur;Gastronómico;18000
+VolcanOsorno;Aventura;35000
+PuertoVarasCity;Cultural;15000
+SaltosPetrohue;Naturaleza;28000
