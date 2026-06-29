@@ -1,77 +1,96 @@
-# Llanquihue Tour versión 3.0
+# Llanquihue Tour versión 4.0
 
 ## Descripción
 
-Aplicación Java desarrollada para la agencia turística **Llanquihue Tour**, que permite gestionar información de tours mediante lectura de datos desde un archivo de texto.
+Aplicación Java desarrollada para la agencia turística **Llanquihue Tour**, que implementa una jerarquía de clases utilizando herencia simple para representar los distintos servicios turísticos ofrecidos por la empresa.
 
-Los datos se almacenan en una estructura dinámica (ArrayList) y son procesados mediante operaciones de recorrido, filtrado y búsqueda.
-
-El sistema está organizado en paquetes para mejorar la modularidad, reutilización y separación de responsabilidades.
+El proyecto mantiene una organización modular por paquetes, permitiendo reutilizar atributos y comportamientos comunes mediante una superclase y especializar cada tipo de servicio a través de subclases.
 
 ---
 
-## Funcionalidades
+## Objetivo de esta semana
 
-- Carga de datos desde archivo ".txt"
-- Almacenamiento en "ArrayList"
-- Visualización de todos los tours
-- Filtrado de tours por precio
-- Filtrado de tours por tipo (Cultural, Aventura, Gastronómico, etc)
-- Búsqueda de tours por nombre
-- Menú interactivo por consola
-- Manejo básico de errores con "try-catch"
+Implementar una jerarquía de clases aplicando los conceptos de:
+
+* Herencia simple.
+* Uso de una superclase y subclases.
+* Reutilización de atributos mediante `super`.
+* Sobreescritura del método `toString()`.
+* Organización del proyecto por responsabilidades.
+
+---
+
+## Clases creadas
+
+### model
+
+* ServicioTuristico
+* RutaGastronomica
+* PaseoLacustre
+* ExcursionCultural
+
+### data
+
+* GestorServicios
+
+### ui
+
+* Main
 
 ---
 
 ## Estructura del proyecto
 
+```
 src/
 ├── model/
-│ └── Tour.java
+│   ├── ServicioTuristico.java
+│   ├── RutaGastronomica.java
+│   ├── PaseoLacustre.java
+│   └── ExcursionCultural.java
 │
 ├── data/
-│ └── GestorDatos.java
+│   └── GestorServicios.java
 │
-├── service/
-│ └── TourService.java
-│
-├── ui/
-│ └── Main.java
-│
-└── resources/
-└── tours.txt
+└── ui/
+    └── Main.java
+
+
+Nota: Se han mantenido las clases `Tour`, `GestorDatos` y `TourService` y el archivo tours.txt en el proyecto, pero no se usan para el objetivo de la actividad formativa.
+
+```
+
 
 ---
 
-## Menú del sistema
+## Funcionamiento
 
-El programa incluye un menú por consola con las siguientes opciones:
+El programa crea dos instancias de cada uno de los tipos de servicio turístico y muestra su información por consola utilizando el método `toString()`, sobrescrito en cada subclase.
 
-1. Ver todos los tours  
-2. Filtrar por precio mínimo  
-3. Filtrar por tipo de tour  
-4. Buscar tour por nombre  
-0. Salir del sistema  
+Se crean:
+
+* 2 rutas gastronómicas.
+* 2 paseos lacustres.
+* 2 excursiones culturales.
 
 ---
 
 ## Ejecución del programa
 
-1. Abrir el proyecto en IntelliJ IDEA o NetBeans.
-2. Verificar que el archivo "tours.txt" esté en "src/resources".
-3. Ejecutar la clase "Main.java".
-4. Interactuar con el menú por consola.
+1. Abrir el proyecto en IntelliJ IDEA.
+2. Ejecutar la clase `Main.java`.
+3. Observar la información de los servicios turísticos mostrada por consola.
 
 ---
 
 ## Tecnologías utilizadas
 
-- Java
-- Programación Orientada a Objetos (POO)
-- Colecciones (ArrayList)
-- Manejo de archivos (BufferedReader, FileReader)
-- Manejo de excepciones (try-catch)
-- Arquitectura por paquetes (model / data / service / ui)
+* Java.
+* Programación Orientada a Objetos (POO).
+* Herencia simple.
+* Sobrescritura de métodos (`@Override`).
+* Constructores con `super`.
+* Arquitectura por paquetes (`model`, `data`, `ui`).
 
 ---
 
@@ -79,4 +98,4 @@ El programa incluye un menú por consola con las siguientes opciones:
 
 Tomás Guzmán Vilches
 
-Actividad Sumativa 5: Organización modular y creación de una librería personalizada – Programación Orientada a Objetos.
+**Actividad Formativa 6: Creando jerarquías de clases con herencia simple – Programación Orientada a Objetos.**
